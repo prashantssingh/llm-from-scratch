@@ -13,5 +13,8 @@ words = raw_text.split("")
 result = [item for item in words if item.strip() != ""]
 
 preprocessed = set(result)
-sorted_unique_words = sorted(preprocessed)
+all_words = sorted(preprocessed)
+vocab_size = len(all_words)
+vocab = {word: index for word, index in enumerate(all_words)}
+
 
